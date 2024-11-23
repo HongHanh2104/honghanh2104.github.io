@@ -2,11 +2,42 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: Materials for courses you taught. Replace this text with your description.
 nav: true
 nav_order: 6
 ---
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
+## Current Teaching Assistant Roles
+I currently serve as a Teaching Assistant at University College Dublin's School of Computer Science, supporting both undergraduate and graduate-level courses. My role involves facilitating student learning, providing technical guidance, and supporting research projects.
 
-Organize your courses by years, topics, or universities, however you like!
+
+## Modules
+
+### COMP47470: Data and Database Forensics
+* **Program**: MSc in Forensics Computing and Cybercrime Investigation
+* **Semester**: Fall 2023, Fall 2024
+* **Responsibilities**:
+  * Delivering lectures on data forensics: Introduction to NLP for Digital Forensics, LLM-generated Text Detection Introduction
+  * Providing technical support to students
+  * Grading assignments
+  * Reviewing and providing feedback on assignments
+
+### COMP47510: Financial Investigation Techniques
+* **Program**: MSc in Forensics Computing and Cybercrime Investigation
+* **Semester**: Spring 2023, Spring 2024
+
+### COMP40160: Research Project
+* **Program**: MSc in Forensics Computing and Cybercrime Investigation
+* **Semester**: Summer 2023
+* **Responsibilities**:
+  * Supervising Master students' research projects
+  * Providing reach and technical guidance
+  * Reviewing and providing feedback on research proposals and final reports
+* **Achievement**:
+  * 2023: Supervised a student who got A+ for the Master thesis and published a paper at a TrustCom conference (Rnak B).
+  * 2023: Supervised a student who got B+ for the Master thesis.
+
+### Providing technical support to students
+* **Program**: School of Computer Science Undergraduate Program
+* **Semester**: Fall 2024
+* **Responsibilities**:
+  * Supporting practical lab sessions
