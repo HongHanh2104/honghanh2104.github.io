@@ -25,32 +25,32 @@
   ],
   "work": [
     {
-      "name": "Decentralized Applied Cryptography Lab (DAC-lab@FIT)",
-      "position": "Research Assistant",
-      "startDate": "Sep 2018",
-      "endDate": " Sep 2021",
-      "summary": "Working on projects related to cryptography, biometric template protection, and speaker-based verification."
+      "name": "Medical Statistics and Informatics Department, Pham Ngoc Thach University of Medicine",
+      "position": "Teaching Assistant",
+      "startDate": "2022-11",
+      "endDate": "2023-08",
+      "summary": "Three courses: 'Basic Informatics', 'Applied Medical Statistics', 'Introduction to Python'. Main tasks: teaching theoretical and empirical lessons."
     },
     {
       "name": "VinUni-Illinoise Smart Health Center (VISHC)",
       "position": "Research Assistant",
       "url": "https://smarthealth.vinuni.edu.vn/people/",
-      "startDate": "Dec 2021",
-      "endDate": "Jun 2022",
+      "startDate": "2021-12",
+      "endDate": "2022-06",
       "summary": "Working on projects that appliy machine learning and deep learning to healthcare, including motion analysis for cerebral palsy children, and physical rehabilitation assessment."
     },
     {
-      "name": "Medical Statistics and Informatics Department, Pham Ngoc Thach University of Medicine",
-      "position": "Teaching Assistant",
-      "startDate": "Nov 2022",
-      "endDate": "Aug 2023",
-      "summary": "Three courses: 'Basic Informatics', 'Applied Medical Statistics', 'Introduction to Python'. Main tasks: teaching theoretical and empirical lessons."
+      "name": "Decentralized Applied Cryptography Lab (DAC-lab@FIT)",
+      "position": "Research Assistant",
+      "startDate": "2018-09",
+      "endDate": "2021-09",
+      "summary": "Working on projects related to cryptography, biometric template protection, and speaker-based verification."
     },
     {
       "name": "Information Technology Department, Ho Chi Minh City University of Science",
       "position": "Teaching Assistant",
-      "startDate": "Jul 2022",
-      "endDate": "Jun 2023",
+      "startDate": "2022-07",
+      "endDate": "2023-06",
       "summary": "Two course: 'Introduction to cryptography' and 'Applied Mathematics and Statistics'. Main tasks: grading students’ homework assignments, teaching empirical lessons."
     }
   ],
