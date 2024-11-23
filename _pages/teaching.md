@@ -36,7 +36,7 @@ I currently serve as a Teaching Assistant at University College Dublin's School 
   * 2023: Supervised a student who got A+ for the Master thesis and published a paper at a TrustCom conference (Rnak B).
   * 2023: Supervised a student who got B+ for the Master thesis.
 
-### Providing technical support to students
+### COMP30030: Introduction to AI
 * **Program**: School of Computer Science Undergraduate Program
 * **Semester**: Fall 2024
 * **Responsibilities**:
