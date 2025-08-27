@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2023-9-1
+date: 2025-4-29
 inline: true
-related_posts: false
+related_posts: flase
 ---
 
-I am a Ph.D student at School of Computer Science at [University College Dublin (UCD)](https://www.ucd.ie/). My research topic is about Deepfake Detection.
+My paper "Think Twice before Adaptation: Improving Adaptability of DeepFake Detection via Online Test-Time Adaptation" has been accepted for presentation in IJCAI-25 (Rank A*). :clap: :sparkles:

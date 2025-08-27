@@ -10,3 +10,16 @@
 "Preprint":
   color: "#5d0f0b"
 
+"IJCAI":
+  url: https://www.ijcai.org/
+  color: "	#fb6f92"
+
+"ECAI":
+  url: https://ecai2025.org/
+  color: "	#80ed99"
+
+
+"TrustCom":
+  url: https://ieeexplore.ieee.org/xpl/conhome/1800729/all-proceedings
+  color: "	#dda15e"
+

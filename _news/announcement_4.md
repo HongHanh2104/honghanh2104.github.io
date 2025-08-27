@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2024-11-2
+date: 2025-7-11
 inline: true
 related_posts: false
 ---
 
-My first work as a supervisor is accepted to IEEE TrustCom 2024! :clap: :sparkles:
+My paper "ToFU: Transforming How Federated Learning Systems Forget User Data" has been accepted for presentation in ECAI-2025 (Rank A).  :clap: :sparkles:

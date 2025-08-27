@@ -1,11 +1,11 @@
 ---
 layout: post
-date: 2024-3-15
+date: 2025-5-30
 inline: true
 related_posts: false
 ---
 
-1 paper accepted to IJCNN 2024! :clap: :sparkles:
+My proposal has been awared by ENFIELD project with the funding of €14,400. :clap: :sparkles:
 
 <!--
 layout: post

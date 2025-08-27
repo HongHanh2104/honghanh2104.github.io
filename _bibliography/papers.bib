@@ -3,6 +3,37 @@
 
 @string{aps = {American Physical Society,}}
 
+@article{tran2025ToFU,
+  abbr={ECAI},
+  title={ToFU: Transforming How Federated Learning Systems Forget User Data},
+  author={Van-Tuan, Tran and Nguyen-Le, Hong-Hanh and Quoc-Viet Pham},
+  abstract={Neural networks unintentionally memorize training data, creating privacy risks in federated learning (FL) systems, such as inference and reconstruction attacks on sensitive data. To mitigate these risks and to comply with privacy regulations, Federated Unlearning (FU) has been introduced to enable participants in FL systems to remove their data's influence from the global model. However, current FU methods primarily act post-hoc, struggling to efficiently erase information deeply memorized by neural networks. We argue that effective unlearning necessitates a paradigm shift: designing FL systems inherently amenable to forgetting. To this end, we propose a learning-to-unlearn Transformation-guided Federated Unlearning (ToFU) framework that incorporates transformations during the learning process to reduce memorization of specific instances. Our theoretical analysis reveals how transformation composition provably bounds instance-specific information, directly simplifying subsequent unlearning. Crucially, ToFU can work as a plug-and-play framework that improves the performance of existing FU methods. Experiments on CIFAR-10, CIFAR-100, and the MUFAC benchmark show that ToFU outperforms existing FU baselines, enhances performance when integrated with current methods, and reduces unlearning time.},
+  year={2025},
+  dimensions={true},
+  selected={true},
+}
+
+@article{nguyen2025think,
+  abbr={IJCAI},
+  title={Think Twice before Adaptation: Improving Adaptability of DeepFake Detection via Online Test-Time Adaptation},
+  author={Nguyen-Le, Hong-Hanh and Tran, Van-Tuan and Nguyen, Dinh-Thuc and Le-Khac, Nhien-An},
+  abstract={Deepfake (DF) detectors face significant challenges when deployed in real-world environments, particularly when encountering test samples deviated from training data through either postprocessingmanipulations or distribution shifts. We demonstrate postprocessing techniques can completely obscure generation artifacts presented in DF samples, leading to performance degradation of DF detectors. To address these challenges, we propose Think Twice before Adaptation (T2A), a novel online test-time adaptation method that enhances the adaptability of detectors during inference without requiring access to source training data or labels. Our key idea is to enable the model to explore alternative options through an Uncertainty-aware Negative Learning objective rather than solely relying on its initial predictions as commonly seen in entropy minimization (EM)-based approaches. We also introduce an Uncertain Sample Prioritization strategy and Gradients Masking technique to improve the adaptation by focusing on important samples and model parameters. Our theoretical analysis demonstrates that the proposed negative learning objective exhibits complementary behavior to EM, facilitating better adaptation capability. Empirically, our method achieves state-of-the-art results compared to existing test-time adaptation (TTA) approaches and significantly enhances the resilience and generalization of DF detectors during inference.},
+  journal={34th International Joint Conference on Artificial Intelligence},
+  year={2025},
+  dimensions={true},
+  selected={true},
+}
+
+@inproceedings{noort2024improving,
+  abbr={TrustCom},
+  title={Improving Security in Internet of Medical Things through Hierarchical Cyberattacks Classification},
+  author={Noort, Vince and Le-Khac, Nhien-An and Nguyen-Le, Hong-Hanh},
+  booktitle={2024 IEEE 23rd International Conference on Trust, Security and Privacy in Computing and Communications (TrustCom)},
+  pages={1304--1309},
+  year={2024},
+  organization={IEEE}
+}
+
 @inproceedings{nguyen2024d,
   abbr={IJCNN},
   title={D-CAPTCHA++: A Study of Resilience of Deepfake CAPTCHA under Transferable Imperceptible Adversarial Attack},
@@ -14,7 +45,7 @@
   organization={IEEE},
   html={https://ieeexplore.ieee.org/abstract/document/10650401},
   dimensions={true},
-  selected={true},
+  selected={false},
 }
 
 @article{nguyen2024privacy,
@@ -24,11 +55,11 @@
   abstract={The advancements in automatic speaker recognition have led to the exploration of voice data for verification systems. This raises concerns about the security of storing voice templates in plaintext. In this paper, we propose a novel cancellable biometrics that does not require users to manage random matrices or tokens. First, we pre-process the raw voice data and feed it into a deep feature extraction module to obtain embeddings. Next, we propose a hashing scheme, Ranking-of-Elements, which generates compact hashed codes by recording the number of elements whose values are lower than that of a random element. This approach captures more information from smaller-valued elements and prevents the adversary from guessing the ranking value through Attacks via Record Multiplicity. Lastly, we introduce a fuzzy matching method, to mitigate the variations in templates resulting from environmental noise. We evaluate the performance and security of our method on two datasets: TIMIT and VoxCeleb1.},
   journal={Pattern Recognition},
   pages={111107},
-  year={2024},
+  year={2025},
   publisher={Elsevier},
   html={https://www.sciencedirect.com/science/article/pii/S0031320324008586},
   dimensions={true},
-  selected={true},
+  selected={false},
 }
 
 @article{nguyen2024deepfake,
@@ -40,4 +71,15 @@
   year={2024},
   publisher={Authorea},
   html={https://www.techrxiv.org/doi/full/10.36227/techrxiv.173121245.50797124}
+}
+
+@article{nguyen2024passive,
+  abbr={Preprint},
+  title={Passive Deepfake Detection Across Multi-modalities: A Comprehensive Surveyy},
+  author={Nguyen-Le, Hong-Hanh and Tran, Van-Tuan and Nguyen, Dinh-Thuc and Le-Khac, Nhien-An},
+  abstract={In recent years, deepfakes (DFs) have been utilized for malicious purposes, such as individual impersonation, misinformation spreading, and artists style imitation, raising questions about ethical and security concerns. In this survey, we provide a comprehensive review and comparison of passive DF detection across multiple modalities, including image, video, audio, and multi-modal, to explore the inter-modality relationships between them. Beyond detection accuracy, we extend our analysis to encompass crucial performance dimensions essential for real-world deployment: generalization capabilities across novel generation techniques, robustness against adversarial manipulations and postprocessing techniques, attribution precision in identifying generation sources, and resilience under real-world operational conditions. Additionally, we analyze the advantages and limitations of existing datasets, benchmarks, and evaluation metrics for passive DF detection. Finally, we propose future research directions that address these unexplored and emerging issues in the field of passive DF detection. This survey offers researchers and practitioners a comprehensive resource for understanding the current landscape, methodological approaches, and promising future directions in this rapidly evolving field.},
+  journal={Authorea Preprints},
+  year={2024},
+  publisher={ArXiv},
+  html={https://arxiv.org/abs/2411.17911}
 }
