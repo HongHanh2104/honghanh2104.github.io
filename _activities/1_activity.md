@@ -4,6 +4,7 @@ title: 🏆Won two awards in European Statistics Awards
 description: My team won two awards with a total of €6,000
 img: assets/img/activity/logo_web_intelligence.svg
 importance: 1
+date: 2025-8-28
 category: challenge
 related_publications: false
 ---
