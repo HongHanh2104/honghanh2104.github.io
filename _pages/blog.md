@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: /blog/
-title: travel blog
+title: Travel Blog
 nav: true
 nav_order: 1
 pagination:

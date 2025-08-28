@@ -199,6 +199,9 @@ collections:
   projects:
     output: true
     permalink: /:collection/:title/
+  activities:
+    output: true
+    permalink: /:collection/:title/
 
 announcements:
   enabled: true
@@ -642,6 +645,7 @@ jsonresume:
   - work
   - publications
   - projects
+  - activities
   - awards
   - skills
   - languages
