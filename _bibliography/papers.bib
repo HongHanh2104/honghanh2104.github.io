@@ -1,3 +1,15 @@
+@article{watermarking2026,
+  abbr = {Preprint},
+  arxiv = {2506.16600},
+  author = {Hong-Hanh Nguyen-Le and Van-Tuan Tran and Dinh-Thuc Nguyen and Nhien-An Le-Khac},
+  html = {https://arxiv.org/abs/2603.20304},
+  journal = {arXiv preprint arXiv:2506.16600},
+  selected = {true},
+  title = {Transferable Multi-Bit Watermarking Across Frozen Diffusion Models via Latent Consistency Bridges},
+  year = {2026},
+  abstract = {As diffusion models (DMs) enable photorealistic image generation at unprecedented scale, watermarking techniques have become essential for provenance establishment and accountability. Existing methods face challenges: sampling-based approaches operate on frozen models but require costly $N$-step Denoising Diffusion Implicit Models (DDIM) inversion (typically $N=50$) for zero-bit-only detection; fine-tuning-based methods achieve fast multi-bit extraction but couple the watermark to a specific model checkpoint, requiring retraining for each architecture. We propose DiffMark, a plug-and-play watermarking method that offers three key advantages over existing approaches: single-pass multi-bit detection, per-image key flexibility, and cross-model transferability. Rather than encoding the watermark into the initial noise vector, DiffMark injects a persistent learned perturbation $\delta$ at every denoising step of a completely frozen DM. The watermark signal accumulates in the final denoised latent $z_0$ and is recovered in a single forward pass. The central challenge of backpropagating gradients through a frozen UNet without traversing the full denoising chain is addressed by employing Latent Consistency Models (LCM) as a differentiable training bridge. This reduces the number of gradient steps from 50 DDIM to 4 LCM and enables a single-pass detection at 16.4 ms, a $45\times$ speedup over sampling-based methods. Moreover, by this design, the encoder learns to map any runtime secret to a unique perturbation at inference time, providing genuine per-image key flexibility and transferability to unseen diffusion-based architectures without per-model fine-tuning. Although achieving these advantages, DiffMark also maintains competitive watermark robustness against distortion, regeneration, and adversarial attacks.}
+}
+
 @inproceedings{nguyen2026beyond,
   abbr={AAAI},
   title={Beyond Binary Classification: A Semi-supervised Approach to Generalized AI-generated Image Detection},
