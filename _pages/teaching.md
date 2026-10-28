@@ -7,10 +7,13 @@ nav: true
 nav_order: 6
 _styles: >
   .teaching-intro {
-    padding: 1.5rem;
-    border-left: 4px solid var(--global-theme-color);
-    background: var(--global-code-bg-color);
-    border-radius: 0 0.5rem 0.5rem 0;
+    padding: 1.5rem 1.5rem 1.5rem 1.35rem;
+    border-left: 3px solid var(--global-theme-color);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-left-width: 3px;
+    border-radius: 18px;
+    box-shadow: 0 12px 32px var(--shadow);
     margin-bottom: 2.5rem;
   }
   .teaching-intro p {
@@ -19,16 +22,17 @@ _styles: >
     line-height: 1.7;
   }
   .course-card {
-    border: 1px solid var(--global-divider-color);
-    border-radius: 0.75rem;
+    border: 1px solid var(--glass-border);
+    border-radius: 18px;
     padding: 1.5rem;
     margin-bottom: 1.5rem;
-    transition: box-shadow 0.2s ease, border-color 0.2s ease;
-    background: var(--global-card-bg-color);
+    transition: box-shadow 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+    background: var(--glass-bg);
+    box-shadow: 0 12px 32px var(--shadow);
   }
   .course-card:hover {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    border-color: var(--global-theme-color);
+    box-shadow: 0 16px 36px var(--shadow);
+    border-color: var(--signal-rose);
   }
   .course-header {
     display: flex;
@@ -44,8 +48,8 @@ _styles: >
     color: var(--global-bg-color);
     background: var(--global-theme-color);
     padding: 0.2rem 0.65rem;
-    border-radius: 0.25rem;
-    letter-spacing: 0.03em;
+    border-radius: 999px;
+    letter-spacing: 0.04em;
     white-space: nowrap;
   }
   .course-title {
@@ -151,10 +155,10 @@ _styles: >
     border-bottom: 2px solid var(--global-divider-color);
   }
   .supervision-table thead th:first-child {
-    border-radius: 0.4rem 0 0 0;
+    border-radius: 14px 0 0 0;
   }
   .supervision-table thead th:last-child {
-    border-radius: 0 0.4rem 0 0;
+    border-radius: 0 14px 0 0;
   }
   .supervision-table tbody td {
     padding: 0.7rem 0.8rem;
@@ -212,10 +216,10 @@ _styles: >
     align-items: center;
     gap: 0.3rem;
     font-size: 0.78rem;
-    background: rgba(181, 9, 172, 0.08);
-    border: 1px solid rgba(181, 9, 172, 0.2);
-    border-radius: 0.25rem;
-    padding: 0.15rem 0.5rem;
+    background: rgba(180, 91, 120, 0.1);
+    border: 1px solid var(--glass-border);
+    border-radius: 999px;
+    padding: 0.2rem 0.65rem;
     margin-top: 0.25rem;
     line-height: 1.4;
     color: var(--global-text-color);
@@ -246,6 +250,22 @@ _styles: >
     white-space: nowrap;
     color: var(--global-text-color-light);
     font-size: 0.85rem;
+  }
+  html[data-theme="dark"] .grade-a-plus {
+    color: #86efac;
+    background: rgba(34, 197, 94, 0.16);
+  }
+  html[data-theme="dark"] .grade-b-plus {
+    color: #bfdbfe;
+    background: rgba(147, 197, 253, 0.14);
+  }
+  html[data-theme="dark"] .grade-high {
+    color: #6ee7b7;
+    background: rgba(16, 185, 129, 0.16);
+  }
+  html[data-theme="dark"] .grade-ongoing {
+    color: #fde68a;
+    background: rgba(234, 179, 8, 0.16);
   }
 ---
 

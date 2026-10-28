@@ -1,0 +1,776 @@
+/******************************************************************************
+ * Iris Lattice
+ * Light-default academic theme: glass panels on a circuit grid, rose and
+ * mauve beside a cool iris signal. Existing typefaces are unchanged.
+ ******************************************************************************/
+
+html {
+  background: var(--global-bg-color);
+}
+
+body {
+  background:
+    radial-gradient(1200px 700px at 100% -10%, var(--wash-a), transparent 55%),
+    radial-gradient(900px 600px at -10% 20%, var(--wash-b), transparent 50%),
+    var(--global-bg-color);
+  background-attachment: fixed;
+}
+
+::selection {
+  background: var(--glow);
+  color: var(--signal-ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--signal-iris);
+  outline-offset: 3px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+summary:focus-visible {
+  border-radius: 8px;
+  box-shadow: 0 0 0 4px var(--glow);
+}
+
+/******************************************************************************
+ * Field
+ ******************************************************************************/
+
+.signal-stage {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  --px: 0px;
+  --py: 0px;
+  --sy: 0px;
+}
+
+.signal-grid {
+  position: absolute;
+  inset: -2px;
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px),
+    radial-gradient(circle, var(--signal-rose) 1.1px, transparent 1.25px);
+  background-size: 56px 56px, 56px 56px, 56px 56px;
+  background-position: center center;
+  mask-image: radial-gradient(ellipse at 50% 28%, #000 0%, transparent 78%);
+  opacity: 0.9;
+}
+
+.signal-ring {
+  position: absolute;
+  width: min(46vw, 520px);
+  height: min(46vw, 520px);
+  right: -8vw;
+  bottom: -12vh;
+  border-radius: 50%;
+  border: 1px solid var(--glass-border);
+  box-shadow:
+    inset 0 0 0 18px transparent,
+    0 0 0 1px transparent;
+}
+
+.signal-ring::before,
+.signal-ring::after {
+  content: "";
+  position: absolute;
+  inset: 12%;
+  border-radius: 50%;
+  border: 1px dashed var(--grid-line);
+}
+
+.signal-ring::after {
+  inset: 28%;
+  border-style: solid;
+  opacity: 0.7;
+}
+
+.signal-wash {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(2px);
+  will-change: transform;
+}
+
+.signal-wash-orb {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  animation: signal-breathe 18s ease-in-out infinite alternate;
+}
+
+.signal-wash-a {
+  width: min(58vw, 640px);
+  height: min(58vw, 640px);
+  top: -16vh;
+  right: -8vw;
+  transform: translate3d(calc(var(--px) * -0.7), calc(var(--py) * -0.45 + var(--sy) * -0.25), 0);
+}
+
+.signal-wash-a .signal-wash-orb {
+  background: radial-gradient(circle, var(--wash-a), transparent 68%);
+}
+
+.signal-wash-b {
+  width: min(48vw, 520px);
+  height: min(48vw, 520px);
+  left: -12vw;
+  top: 18vh;
+  transform: translate3d(calc(var(--px) * 0.55), calc(var(--py) * 0.4 + var(--sy) * 0.2), 0);
+}
+
+.signal-wash-b .signal-wash-orb {
+  background: radial-gradient(circle, var(--wash-b), transparent 70%);
+  animation-duration: 22s;
+  animation-direction: alternate-reverse;
+}
+
+.signal-wash-c {
+  width: min(36vw, 420px);
+  height: min(36vw, 420px);
+  left: 28vw;
+  bottom: -14vh;
+  transform: translate3d(calc(var(--px) * 0.35), calc(var(--py) * -0.2 + var(--sy) * 0.45), 0);
+}
+
+.signal-wash-c .signal-wash-orb {
+  background: radial-gradient(circle, var(--wash-c), transparent 70%);
+  animation-duration: 26s;
+}
+
+#signal-field {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes signal-breathe {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1) translate3d(-2%, 3%, 0);
+  }
+}
+
+body > header {
+  position: relative;
+  z-index: 3;
+}
+
+body > .container {
+  position: relative;
+  z-index: 1;
+}
+
+footer.fixed-bottom,
+#back-to-top {
+  z-index: 4;
+}
+
+/******************************************************************************
+ * Navigation
+ ******************************************************************************/
+
+.navbar.navbar-light {
+  opacity: 1;
+  background: var(--glass-nav) !important;
+  backdrop-filter: blur(16px) saturate(1.15);
+  -webkit-backdrop-filter: blur(16px) saturate(1.15);
+  border-bottom: 1px solid var(--glass-border);
+  box-shadow: 0 10px 30px var(--shadow);
+}
+
+.navbar .navbar-brand {
+  letter-spacing: 0.01em;
+}
+
+.navbar-nav .nav-item .nav-link {
+  position: relative;
+  border-radius: 999px;
+  transition: color 0.25s ease, background-color 0.25s ease;
+}
+
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0.65rem;
+  right: 0.65rem;
+  bottom: 0.28rem;
+  height: 1px;
+  border-radius: 1px;
+  background: linear-gradient(90deg, transparent, var(--signal-rose), var(--signal-iris), transparent);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.navbar .nav-item:hover > .nav-link::after,
+.navbar .nav-item.active > .nav-link::after,
+.navbar .nav-item:focus-within > .nav-link::after {
+  transform: scaleX(1);
+}
+
+.navbar .dropdown-menu {
+  margin-top: 0.4rem;
+  padding: 0.4rem;
+  background: var(--glass-nav);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  box-shadow: 0 16px 40px var(--shadow);
+}
+
+.navbar .dropdown-item {
+  border-radius: 10px;
+}
+
+#light-toggle,
+#search-toggle {
+  border-radius: 999px;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+#light-toggle:hover,
+#search-toggle:hover {
+  transform: translateY(-1px);
+}
+
+html.signal-motion .navbar-nav .nav-item {
+  animation: signal-nav-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+  animation-delay: calc(var(--nav-i, 0) * 48ms);
+}
+
+@keyframes signal-nav-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+html.signal-motion .container[role="main"] {
+  animation: signal-page 0.7s ease both;
+}
+
+@keyframes signal-page {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+progress {
+  height: 2px;
+  z-index: 1031;
+}
+
+progress::-webkit-progress-value {
+  background: linear-gradient(90deg, var(--signal-rose), var(--signal-mauve) 55%, var(--signal-iris));
+}
+
+progress::-moz-progress-bar {
+  background: linear-gradient(90deg, var(--signal-rose), var(--signal-mauve) 55%, var(--signal-iris));
+}
+
+/******************************************************************************
+ * Type details — same faces, softer frame
+ ******************************************************************************/
+
+.signal-cipher {
+  margin: 0 0 0.4rem;
+  font-family: monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--signal-label);
+}
+
+.post-header,
+.header-bar {
+  position: relative;
+}
+
+.post-header::after {
+  content: "";
+  display: block;
+  height: 1px;
+  margin-top: 0.85rem;
+  background: linear-gradient(90deg, var(--signal-rose), var(--signal-mauve), var(--signal-iris), transparent 88%);
+  opacity: 0.85;
+}
+
+.header-bar {
+  border-bottom: none;
+}
+
+.header-bar::after {
+  content: "";
+  display: block;
+  height: 1px;
+  margin: 1.25rem auto 0;
+  max-width: 16rem;
+  background: linear-gradient(90deg, transparent, var(--signal-rose), var(--signal-iris), transparent);
+}
+
+.post .post-title,
+.header-bar h1 {
+  line-height: 1.2;
+}
+
+.is-decrypting {
+  animation: signal-glint 0.7s ease;
+}
+
+@keyframes signal-glint {
+  0% {
+    text-shadow: none;
+  }
+  35% {
+    text-shadow:
+      1px 0 0 rgba(180, 91, 120, 0.45),
+      -1px 0 0 rgba(77, 98, 180, 0.35);
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+/******************************************************************************
+ * Glass surfaces
+ ******************************************************************************/
+
+.card,
+.cv .card,
+.publications ol.bibliography > li,
+.repo {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+  box-shadow: 0 12px 32px var(--shadow);
+}
+
+.card {
+  overflow: hidden;
+}
+
+.projects .card .card-title,
+.card .card-text {
+  overflow-wrap: anywhere;
+}
+
+.publications ol.bibliography > li {
+  padding: 1rem 1.1rem 0.85rem;
+  overflow: hidden;
+}
+
+.publications h2.bibliography,
+.projects h2.category {
+  color: var(--signal-label);
+  border-color: transparent;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+}
+
+.publications .abbr abbr,
+.publications abbr.badge {
+  border-radius: 999px;
+  letter-spacing: 0.04em;
+}
+
+.publications .links a.btn,
+.btn {
+  border-radius: 999px;
+}
+
+.news .table,
+.archive table {
+  border-collapse: separate;
+  border-spacing: 0 0.7rem;
+}
+
+.news tr,
+.archive tr {
+  background: var(--glass-bg);
+  box-shadow: 0 10px 26px var(--shadow);
+  transition: box-shadow 0.35s ease, background-color 0.35s ease;
+}
+
+.news th,
+.news td,
+.archive th,
+.archive td {
+  border: none;
+  padding: 0.9rem 1rem;
+  background: transparent;
+}
+
+.news th,
+.archive th {
+  color: var(--signal-label);
+  font-weight: 500;
+  border-radius: 16px 0 0 16px;
+}
+
+.news td,
+.archive td {
+  border-radius: 0 16px 16px 0;
+}
+
+.news tr.is-tilting,
+.archive tr.is-tilting {
+  box-shadow:
+    0 16px 36px var(--shadow),
+    0 0 0 1px var(--glass-border);
+  background:
+    radial-gradient(420px circle at var(--glow-x, 50%) var(--glow-y, 0%), var(--glow), transparent 42%),
+    var(--glass-bg);
+}
+
+.profile img,
+.profile .rounded {
+  border-radius: 22px !important;
+  box-shadow:
+    0 0 0 5px rgba(180, 91, 120, 0.12),
+    0 16px 36px var(--shadow);
+}
+
+.social .contact-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  font-size: 1.35rem;
+}
+
+.social .contact-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 18px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 20px var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social .contact-icons a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px var(--shadow);
+  text-decoration: none;
+}
+
+blockquote {
+  border-radius: 16px;
+  background: var(--glass-bg);
+  border-left-width: 3px;
+}
+
+.bibsearch-form-input,
+.newsletter-form-input {
+  border-radius: 999px;
+  border-color: var(--glass-border);
+  background: #fffdfd;
+  color: var(--global-text-color);
+  padding: 0.65rem 1rem;
+}
+
+html[data-theme="dark"] .bibsearch-form-input,
+html[data-theme="dark"] .newsletter-form-input {
+  background: #2a2130;
+  color: var(--global-text-color);
+}
+
+.bibsearch-form-input:focus,
+.newsletter-form-input:focus {
+  border-color: var(--signal-iris) !important;
+  box-shadow: 0 0 0 4px var(--glow);
+}
+
+footer.fixed-bottom {
+  border-top: 1px solid var(--glass-border);
+  background:
+    linear-gradient(90deg, var(--signal-rose), var(--signal-mauve), var(--signal-iris)) top / 100% 1px no-repeat,
+    var(--global-footer-bg-color);
+  backdrop-filter: blur(14px);
+}
+
+footer.fixed-bottom .container,
+footer.sticky-bottom .container {
+  color: var(--global-footer-text-color);
+}
+
+footer.sticky-bottom {
+  background: var(--glass-bg);
+  border-top: 1px solid var(--glass-border);
+  border-radius: 24px 24px 0 0;
+}
+
+.post-list > li {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 18px;
+  margin-bottom: 0.9rem;
+  padding: 1.25rem 1.3rem;
+  box-shadow: 0 10px 26px var(--shadow);
+}
+
+/******************************************************************************
+ * Reveal + tilt
+ ******************************************************************************/
+
+html.signal-motion .signal-reveal {
+  opacity: 0;
+  transform: translate3d(0, 16px, 0);
+  transition:
+    opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+html.signal-motion .signal-reveal.is-inview {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0ms;
+}
+
+html.signal-motion tr.signal-reveal,
+html.signal-motion tr.signal-reveal.is-inview {
+  transform: none;
+}
+
+html.signal-motion .signal-reveal.signal-tilt.is-inview {
+  transition:
+    opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.45s ease;
+}
+
+html.signal-motion .signal-reveal.signal-tilt.is-inview.is-tilting {
+  transition: transform 0.06s linear, box-shadow 0.3s ease, opacity 0.4s ease;
+}
+
+.signal-tilt {
+  transform-style: preserve-3d;
+  transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s ease;
+}
+
+.signal-tilt.is-tilting {
+  box-shadow:
+    0 18px 40px var(--shadow),
+    0 0 0 1px var(--glass-border);
+}
+
+.card.signal-tilt.is-tilting::after,
+.publications ol.bibliography > li.signal-tilt.is-tilting::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: radial-gradient(460px circle at var(--glow-x, 50%) var(--glow-y, 0%), var(--glow), transparent 40%);
+}
+
+.publications ol.bibliography > li,
+.card {
+  position: relative;
+}
+
+/******************************************************************************
+ * Motion preferences and small screens
+ ******************************************************************************/
+
+@media (max-width: 768px) {
+  footer.fixed-bottom {
+    position: static;
+  }
+
+  body {
+    padding-bottom: 1.5rem;
+  }
+
+  .navbar.navbar-light,
+  .card,
+  .publications ol.bibliography > li,
+  footer.fixed-bottom,
+  .navbar .dropdown-menu {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+
+  .navbar.navbar-light {
+    background: var(--glass-nav-solid) !important;
+  }
+
+  .signal-wash-orb {
+    animation: none;
+  }
+
+  .signal-ring {
+    opacity: 0.45;
+  }
+
+  .social .contact-icons a {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .signal-wash-orb,
+  html.signal-motion .navbar-nav .nav-item,
+  html.signal-motion .container[role="main"],
+  .is-decrypting {
+    animation: none !important;
+  }
+
+  html.signal-motion .signal-reveal,
+  html.signal-motion .signal-reveal.is-inview,
+  .signal-tilt,
+  .signal-tilt.is-tilting {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+html.signal-paused .signal-wash-orb {
+  animation-play-state: paused;
+}
+
+/******************************************************************************
+ * Shared content: every page, not only the homepage
+ ******************************************************************************/
+
+.post h1,
+.post h2,
+.post h3,
+.post h4,
+.header-bar h1,
+.header-bar h2 {
+  color: var(--global-text-color);
+}
+
+.post h2:not(.category):not(.bibliography),
+.post h3:not(.section-heading) {
+  background-image: linear-gradient(90deg, var(--signal-rose), var(--signal-mauve), transparent 78%);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: 100% 1px;
+  padding-bottom: 0.35rem;
+}
+
+.post article ul:not(.pagination):not(.task-list):not(.navbar-nav) > li::marker,
+.course-responsibilities li::marker {
+  color: var(--signal-rose);
+}
+
+.post article ol > li::marker {
+  color: var(--signal-iris);
+}
+
+.post article ul:not(.pagination):not(.task-list),
+.post article ol,
+.course-responsibilities ul {
+  padding-left: 1.15rem;
+}
+
+.post article ul:not(.pagination):not(.task-list) > li,
+.post article ol > li,
+.course-responsibilities li {
+  margin-bottom: 0.28rem;
+  line-height: 1.65;
+}
+
+.post article table:not(.supervision-table):not(.institution):not(.table-cv):not(.table-cv-map):not(.table-borderless) {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: 1rem 0 1.5rem;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.post article table:not(.supervision-table):not(.institution):not(.table-cv):not(.table-cv-map):not(.table-borderless) th,
+.post article table:not(.supervision-table):not(.institution):not(.table-cv):not(.table-cv-map):not(.table-borderless) td {
+  padding: 0.7rem 0.9rem;
+  border-bottom: 1px solid var(--global-divider-color);
+  vertical-align: top;
+}
+
+.post article table:not(.supervision-table):not(.institution):not(.table-cv):not(.table-cv-map):not(.table-borderless) th {
+  color: var(--signal-label);
+  font-weight: 600;
+  background: rgba(180, 91, 120, 0.06);
+}
+
+.news table,
+.archive table {
+  background: transparent;
+  border: none;
+  overflow: visible;
+}
+
+table.institution td,
+table.institution th,
+table.table-cv td,
+table.table-cv th {
+  border-bottom: 1px solid var(--global-divider-color);
+  padding-top: 0.35rem;
+  padding-bottom: 0.35rem;
+}
+
+a.btncv {
+  border-radius: 999px !important;
+}
+
+#toc-sidebar,
+nav[data-toggle="toc"] {
+  padding: 0.85rem 0.7rem 0.85rem 0.9rem;
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  background: var(--glass-bg);
+  box-shadow: 0 10px 24px var(--shadow);
+}
+
+.pagination .page-link {
+  border-radius: 999px;
+  margin: 0 0.15rem;
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg);
+}
+
+.pagination .page-item.active .page-link {
+  border-color: transparent;
+}
+
+.course-card,
+.teaching-intro,
+.cv .card,
+.featured-posts .card {
+  border-radius: 18px;
+}
+
+.repositories .repo,
+.repo {
+  border-radius: 18px;
+  overflow: hidden;
+}

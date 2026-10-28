@@ -3,4 +3,7 @@ module.exports = {
   css: ["_site/assets/css/*.css"],
   output: "_site/assets/css/",
   skippedContentGlobs: ["_site/assets/**/*.html"],
+  safelist: {
+    greedy: [/^signal-/, /^is-inview$/, /^is-tilting$/, /^is-decrypting$/, /^signal-motion$/, /^signal-paused$/],
+  },
 };

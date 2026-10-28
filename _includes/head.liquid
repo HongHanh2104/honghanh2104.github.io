@@ -1,3 +1,28 @@
+<!-- Theme before first paint: light unless the visitor already chose otherwise. -->
+<script>
+  (function () {
+    var setting = "light";
+    try {
+      var stored = localStorage.getItem("theme");
+      if (stored === "dark" || stored === "light" || stored === "system") setting = stored;
+    } catch (e) {}
+    var theme = setting;
+    if (setting === "system" && window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      theme = "dark";
+    } else if (setting === "system") {
+      theme = "light";
+    }
+    var root = document.documentElement;
+    root.setAttribute("data-theme-setting", setting);
+    root.setAttribute("data-theme", theme);
+    root.style.colorScheme = theme;
+  })();
+</script>
+<style>
+  html { background: #fbf6f8; color-scheme: light; }
+  html[data-theme="dark"] { background: #141016; color-scheme: dark; }
+</style>
+
 <!-- Metadata, OpenGraph and Schema.org -->
 {% include metadata.liquid %}
 
