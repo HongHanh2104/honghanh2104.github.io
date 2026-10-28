@@ -484,9 +484,15 @@ blockquote {
 .newsletter-form-input {
   border-radius: 999px;
   border-color: var(--glass-border);
-  background: var(--glass-bg);
+  background: #fffdfd;
   color: var(--global-text-color);
   padding: 0.65rem 1rem;
+}
+
+html[data-theme="dark"] .bibsearch-form-input,
+html[data-theme="dark"] .newsletter-form-input {
+  background: #2a2130;
+  color: var(--global-text-color);
 }
 
 .bibsearch-form-input:focus,
@@ -589,6 +595,14 @@ html.signal-motion .signal-reveal.signal-tilt.is-inview.is-tilting {
  ******************************************************************************/
 
 @media (max-width: 768px) {
+  footer.fixed-bottom {
+    position: static;
+  }
+
+  body {
+    padding-bottom: 1.5rem;
+  }
+
   .navbar.navbar-light,
   .card,
   .publications ol.bibliography > li,
