@@ -318,7 +318,6 @@ _styles: >
       <td><span class="grade-badge grade-a-plus">In Progress</span></td>
     </tr>
     <tr>
-    <tr>
       <td>
         <span class="student-name">Bernhard Kneip</span>
         <div class="student-university"><i class="fa-solid fa-building-columns"></i>University College Dublin &mdash; MSc FCCI</div>
