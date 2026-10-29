@@ -307,31 +307,34 @@
     heading.classList.add("is-decrypting");
     var frame = 0;
     var total = isMobile() ? 8 : 12;
-    var timer = window.setInterval(function () {
-      if (document.hidden) return;
-      frame += 1;
-      var seen = 0;
-      nodesInHeading.forEach(function (node, nodeIndex) {
-        var original = originals[nodeIndex];
-        var chars = Array.from(original);
-        node.textContent = chars
-          .map(function (ch, index) {
-            if (ch.trim() === "" || ch === "-" || ch === "—" || ch === "·") return ch;
-            var settleAt = Math.floor((frame / total) * totalLength);
-            if (seen + index < settleAt) return ch;
-            return glyphs[(index * 5 + frame + nodeIndex) % glyphs.length];
-          })
-          .join("");
-        seen += original.length;
-      });
-      if (frame >= total) {
+    var timer = window.setInterval(
+      function () {
+        if (document.hidden) return;
+        frame += 1;
+        var seen = 0;
         nodesInHeading.forEach(function (node, nodeIndex) {
-          node.textContent = originals[nodeIndex];
+          var original = originals[nodeIndex];
+          var chars = Array.from(original);
+          node.textContent = chars
+            .map(function (ch, index) {
+              if (ch.trim() === "" || ch === "-" || ch === "—" || ch === "·") return ch;
+              var settleAt = Math.floor((frame / total) * totalLength);
+              if (seen + index < settleAt) return ch;
+              return glyphs[(index * 5 + frame + nodeIndex) % glyphs.length];
+            })
+            .join("");
+          seen += original.length;
         });
-        heading.classList.remove("is-decrypting");
-        window.clearInterval(timer);
-      }
-    }, isMobile() ? 48 : 40);
+        if (frame >= total) {
+          nodesInHeading.forEach(function (node, nodeIndex) {
+            node.textContent = originals[nodeIndex];
+          });
+          heading.classList.remove("is-decrypting");
+          window.clearInterval(timer);
+        }
+      },
+      isMobile() ? 48 : 40
+    );
   }
 
   function addCiphers() {
@@ -339,7 +342,11 @@
       if (header.querySelector(".signal-cipher")) return;
       var title = header.querySelector("h1");
       var raw = (title ? title.textContent : "field").replace(/\s+/g, " ").trim().toLowerCase();
-      var slug = raw.replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 32) || "field";
+      var slug =
+        raw
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/^-|-$/g, "")
+          .slice(0, 32) || "field";
       var label = document.createElement("p");
       label.className = "signal-cipher";
       label.setAttribute("aria-hidden", "true");
@@ -438,9 +445,11 @@
       document.querySelectorAll("h1, h2, h3").forEach(decryptHeading);
     }
 
-    document.querySelectorAll(".card, .publications ol.bibliography > li, .post-list > li, .repo, .course-card").forEach(function (el) {
-      bindTilt(el, "tilt");
-    });
+    document
+      .querySelectorAll(".card, .publications ol.bibliography > li, .post-list > li, .repo, .course-card, .teaching-highlight")
+      .forEach(function (el) {
+        bindTilt(el, "tilt");
+      });
     document.querySelectorAll(".news tr").forEach(function (el) {
       bindTilt(el, "glow");
     });

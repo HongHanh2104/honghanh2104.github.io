@@ -4,7 +4,7 @@ permalink: /teaching/
 title: Teaching
 description: Supervision & Teaching at University College Dublin's School of Computer Science
 nav: true
-nav_order: 6
+nav_order: 1
 _styles: >
   .teaching-intro {
     padding: 1.5rem 1.5rem 1.5rem 1.35rem;
