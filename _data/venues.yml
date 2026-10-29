@@ -1,4 +1,3 @@
-
 "Pattern Recognition":
   url: https://www.journals.elsevier.com/pattern-recognition
   color: "#ff6600"
@@ -18,8 +17,40 @@
   url: https://ecai2025.org/
   color: "	#80ed99"
 
-
 "TrustCom":
   url: https://ieeexplore.ieee.org/xpl/conhome/1800729/all-proceedings
   color: "	#dda15e"
 
+"AAAI":
+  url: https://aaai.org/conference/aaai/aaai-26/
+  color: "#8a3054"
+
+"ACM CSUR":
+  url: https://dl.acm.org/journal/csur
+  color: "#3c4d98"
+
+"ACM MM":
+  color: "#6b3d62"
+
+"AIR":
+  url: https://link.springer.com/journal/10462
+  color: "#6d5a86"
+
+"arXiv":
+  url: https://arxiv.org/
+  color: "#8a3054"
+
+"CITA":
+  color: "#5c4a62"
+
+"FSI:DI":
+  url: https://www.sciencedirect.com/journal/forensic-science-international-digital-investigation
+  color: "#3c4d98"
+
+"ICDF2C":
+  url: https://digitalforensics-conference.org/
+  color: "#7a4e68"
+
+"ICML":
+  url: https://icml.cc/
+  color: "#4d62b4"

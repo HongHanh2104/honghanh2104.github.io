@@ -4,7 +4,7 @@ title: Activities
 permalink: /activities/
 description: A growing collection of your cool activities.
 nav: true
-nav_order: 3
+nav_order: 4
 display_categories: [challenge, conference]
 horizontal: false
 ---

@@ -1,9 +1,123 @@
+@inproceedings{thanh2026helpful,
+  abbr = {ACM MM},
+  title = {When Helpful Text Hurts: Option-Redirecting Bias in Vision-Language Models},
+  author = {Thanh, Tam Le Thi and Van, Hoang Tran and Nguyen-Le, Hong-Hanh and Ngo, Thanh Duc},
+  booktitle = {Proceedings of the 34th ACM International Conference on Multimedia (ACM MM)},
+  year = {2026},
+  arxiv = {2609.32489},
+  html = {https://arxiv.org/abs/2609.32489},
+  abstract = {In tri-modal visual question answering, auxiliary text is commonly used to complement visual and textual inputs, yet its reliability is often uncontrolled. We show that the most harmful auxiliary text is not necessarily the most factually incorrect, but the one that aligns with the question while contradicting the image and favoring a specific distractor. We introduce the Textual Reliability Ladder, a controlled diagnostic that varies image consistency, question relevance, and option support, and a training-free inference-time intervention that reduces redirected errors while largely preserving performance under faithful text.}
+}
+
+@inproceedings{fang2026freda,
+  abbr = {ICDF2C},
+  title = {FreDA: Training-Free Test-Time Adaptation for Deepfake Detection via Non-parametric Cache Retrieval},
+  author = {Fang, Yang and Le-Khac, Nhien-An and Nguyen-Le, Hong-Hanh},
+  booktitle = {17th EAI International Conference on Digital Forensics and Cyber Crime (ICDF2C)},
+  series = {Lecture Notes of the Institute for Computer Sciences, Social Informatics and Telecommunications Engineering},
+  volume = {720},
+  pages = {55--70},
+  year = {2026},
+  doi = {10.1007/978-3-032-37274-1_4},
+  html = {https://doi.org/10.1007/978-3-032-37274-1_4},
+  code = {https://github.com/123fangyang/FreDA},
+  abstract = {Deepfake detectors face significant challenges when deployed in real-world environments, particularly when encountering test samples deviated from training data through either distribution shifts or post-processing manipulations. We propose FreDA (Free Detection Adaptation), a training-free test-time adaptation method that uses a non-parametric cache retrieval mechanism for binary classification, enabling the model to incorporate distributional information from a small reference set without gradient computation or parameter updates.}
+}
+
+@article{rettinger2026effective,
+  abbr = {FSI:DI},
+  title = {Forensic reliability of publicly accessible image-authentication and deepfake-detection tools: An investigator-led evaluation of open-source and free-to-use platforms},
+  author = {Rettinger, Michael and Beaumont, Benjamin and Le-Khac, Nhien-An and Nguyen-Le, Hong-Hanh},
+  journal = {Forensic Science International: Digital Investigation},
+  volume = {58},
+  pages = {302186},
+  year = {2026},
+  doi = {10.1016/j.fsidi.2026.302186},
+  arxiv = {2603.04456},
+  html = {https://doi.org/10.1016/j.fsidi.2026.302186},
+  note = {Journal version of the arXiv preprint How Effective Are Publicly Accessible Deepfake Detection Tools? A Comparative Evaluation of Open-Source and Free-to-Use Platforms.},
+  abstract = {Deepfake, AI-generated, and conventionally tampered images increasingly appear in investigations in which investigators must assess whether a questioned image is authentic, manipulated, or synthetic. This paper evaluates six publicly accessible tools from two operational paradigms: analyst-interpreted forensic platforms (InVID and WeVerify, FotoForensics, and Forensically) and automated AI classifiers (DecopyAI, FaceOnLive, and Bitmind). Forensic-platform assessments achieved high sensitivity but sometimes interpreted traces from genuine images as suspicious, whereas AI classifiers maintained high specificity for real images but missed substantial numbers of deepfakes. On the classifier dataset, the investigator achieved a higher accuracy point estimate than every classifier. These tools are useful for early-stage triage but should not be treated as standalone evidence.}
+}
+
+@inproceedings{tran2026ubsmoe,
+  abbr = {ICML},
+  title = {UB-SMoE: Universally Balanced Sparse Mixture-of-Experts for Resource-adaptive Federated Fine-tuning of Foundation Models},
+  author = {Tran, Van-Tuan and Nguyen-Le, Hong-Hanh and Ruffini, Marco and Dzaferagic, Merim},
+  booktitle = {Proceedings of the 43rd International Conference on Machine Learning (ICML)},
+  year = {2026},
+  selected = {true},
+  arxiv = {2605.16690},
+  html = {https://icml.cc/virtual/2026/poster/61663},
+  abstract = {Heterogeneous LoRA-rank methods address system heterogeneity in federated fine-tuning of foundation models, but dense feed-forward computations dominate. We propose Universally Balanced Sparse Mixture-of-Experts (UB-SMoE), which introduces Dynamic Modulated Routing to rebalance expert utilization and Universal Pseudo-Gradient to reconstruct learning signals for non-activated experts. Experiments show that UB-SMoE achieves up to 45 percent computational reduction on low-resource clients while improving their performance by 8.7 times compared to existing heterogeneous LoRA-rank methods.}
+}
+
+@article{nguyen2025comprehensive,
+  abbr = {AIR},
+  title = {Deepfake Detection Across Image, Video, and Audio: A Comprehensive Survey with Empirical Evaluation of Generalization and Robustness},
+  author = {Nguyen-Le, Hong-Hanh and Tran, Van-Tuan and Nguyen, Dinh-Thuc and Le-Khac, Nhien-An},
+  journal = {Artificial Intelligence Review},
+  volume = {59},
+  number = {10},
+  pages = {203},
+  year = {2026},
+  doi = {10.1007/s10462-026-11608-4},
+  html = {https://doi.org/10.1007/s10462-026-11608-4},
+  selected = {true},
+  abstract = {This survey presents a cross-modality analysis of passive deepfake detection across image, video, and audio, covering forensic-based, data-driven, fingerprint-based, and hybrid visual methods and handcrafted versus learnable audio features. It also reports a unified evaluation of within-domain accuracy, cross-domain generalization, and robustness against adversarial attacks, and discusses dataset limitations and future research directions.}
+}
+
+@misc{kneip2026logs,
+  abbr = {arXiv},
+  title = {Sample-Efficient LLM-Based Detection of Malicious Web Server Logs with Forensically Explainable Reasoning},
+  author = {Kneip, Bernhard and Le-Khac, Nhien-An and Nguyen-Le, Hong-Hanh},
+  year = {2026},
+  arxiv = {2606.08649},
+  html = {https://arxiv.org/abs/2606.08649},
+  note = {arXiv preprint arXiv:2606.08649.},
+  abstract = {We present CEF-Log, a context-enhanced few-shot chain-of-thought prompting strategy for large language models that detects malicious web server logs and produces human-readable explanations. CEF-Log reaches an F1-score of 0.99 on the CSIC 2010 dataset using four examples. We also introduce ForenWebLog, a dataset with real-world attacks and multi-step attack sequences.}
+}
+
+@inproceedings{vohoang2026charvoc,
+  abbr = {CITA},
+  title = {ChaRVoC: A Challenge-Response Voice Cancelable Authentication System},
+  author = {Vo-Hoang, Phuc-Khang and Ta, Hoang C. and Le-Khac, Nhien-An and Nguyen, Dinh-Thuc and Nguyen-Le, Hong-Hanh},
+  booktitle = {Conference on Information Technology and its Applications (CITA)},
+  year = {2026},
+  arxiv = {2605.02990},
+  html = {https://arxiv.org/abs/2605.02990},
+  abstract = {ChaRVoC is a challenge-response voice cancelable authentication system that combines voice biometrics, a user-memorized secret key, and a dynamic system-generated challenge. A HashGray-XOR scheme produces non-invertible templates. The system is evaluated against WTA, IoM, and Ranking-of-Element hashing on VoxCeleb1, TIMIT, and VOiCES, and is shown to provide cancelability and unlinkability.}
+}
+
+@inproceedings{nguyenle2026afss,
+  abbr = {IJCNN},
+  title = {AFSS: Artifact-Focused Self-Synthesis for Mitigating Bias in Audio Deepfake Detection},
+  author = {Nguyen-Le, Hai-Son and Nguyen-Thanh, Hung-Cuong and Le-Khac, Nhien-An and Nguyen, Dinh-Thuc and Nguyen-Le, Hong-Hanh},
+  booktitle = {2026 International Joint Conference on Neural Networks (IJCNN)},
+  year = {2026},
+  arxiv = {2603.26856},
+  html = {https://arxiv.org/abs/2603.26856},
+  code = {https://github.com/NguyenLeHaiSonGit/AFSS},
+  abstract = {Artifact-Focused Self-Synthesis (AFSS) mitigates bias in audio deepfake detection by generating pseudo-fake samples from real audio through self-conversion and self-reconstruction under a same-speaker constraint, so the detector must rely on generation artifacts. A learnable reweighting loss emphasizes synthetic samples during training. The method does not require a pre-collected fake dataset. Code is available at https://github.com/NguyenLeHaiSonGit/AFSS.}
+}
+
+@misc{guo2026vlm,
+  abbr = {Preprint},
+  title = {Exploring Vision-Language Models for Digital and Multimedia Forensics: Opportunities and Challenges},
+  author = {Guo, Yibing and Le-Khac, Nhien-An and Nguyen-Le, Hong-Hanh},
+  year = {2026},
+  month = {mar},
+  doi = {10.13140/RG.2.2.32256.19206},
+  html = {https://doi.org/10.13140/RG.2.2.32256.19206},
+  note = {Unpublished preprint posted on ResearchGate. Google Scholar lists no year or venue.},
+  abstract = {This survey organizes vision-language model applications in multimedia forensics into four tasks: visual triage and question answering, scene understanding and surveillance analysis, misinformation detection, and automated forensic reporting. It reviews representative methods, datasets, and evaluation protocols, and discusses challenges in data, models, system integration, explainability, and evaluation.}
+}
+
 @article{watermarking2026,
   abbr = {Preprint},
-  arxiv = {2506.16600},
+  arxiv = {2603.20304},
   author = {Hong-Hanh Nguyen-Le and Van-Tuan Tran and Dinh-Thuc Nguyen and Nhien-An Le-Khac},
   html = {https://arxiv.org/abs/2603.20304},
-  journal = {arXiv preprint arXiv:2506.16600},
+  journal = {arXiv preprint arXiv:2603.20304},
   selected = {true},
   title = {Transferable Multi-Bit Watermarking Across Frozen Diffusion Models via Latent Consistency Bridges},
   year = {2026},
@@ -13,7 +127,7 @@
 @inproceedings{nguyen2026beyond,
   abbr={AAAI},
   title={Beyond Binary Classification: A Semi-supervised Approach to Generalized AI-generated Image Detection},
-  author={Nguyen-Le, Hong-Hanh and Tran, Van-Tuan and Le-Khac, Nhien-An},
+  author={Nguyen-Le, Hong-Hanh and Tran, Van-Tuan and Nguyen, Dinh-Thuc and Le-Khac, Nhien-An},
   booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
   volume={40},
   number={42},
@@ -21,7 +135,49 @@
   year={2026},
   selected={true},
   html={https://arxiv.org/abs/2511.19499},
-  abstract={Deepfake (DF) detectors face significant challenges when deployed in real-world environments, particularly when encountering test samples deviated from training data through either postprocessing manipulations or distribution shifts. We demonstrate postprocessing techniques can completely obscure generation artifacts presented in DF samples, leading to performance degradation of DF detectors. To address these challenges, we propose Think Twice before Adaptation (T2A), a novel online test-time adaptation method that enhances the adaptability of detectors during inference without requiring access to source training data or labels. Our key idea is to enable the model to explore alternative options through an Uncertainty-aware Negative Learning objective rather than solely relying on its initial predictions as commonly seen in entropy minimization (EM)-based approaches. We also introduce an Uncertain Sample Prioritization strategy and Gradients Masking technique to improve the adaptation by focusing on important samples and model parameters. Our theoretical analysis demonstrates that the proposed negative learning objective exhibits complementary behavior to EM, facilitating better adaptation capability. Empirically, our method achieves state-of-the-art results compared to existing test-time adaptation (TTA) approaches and significantly enhances the resilience and generalization of DF detectors during inference.}
+  arxiv={2511.19499},
+  abstract={The rapid advancement of generators (e.g., StyleGAN, Midjourney, DALL-E) has produced highly realistic synthetic images, posing significant challenges to digital media authenticity. These generators are typically based on a few core architectural families, primarily Generative Adversarial Networks (GANs) and Diffusion Models (DMs). A critical vulnerability in current forensics is the failure of detectors to achieve cross-generator generalization, especially when crossing architectural boundaries (e.g., from GANs to DMs). We hypothesize that this gap stems from fundamental differences in the artifacts produced by these distinct architectures. In this work, we provide a theoretical analysis explaining how the distinct optimization objectives of the GAN and DM architectures lead to different manifold coverage behaviors. We demonstrate that GANs permit partial coverage, often leading to boundary artifacts, while DMs enforce complete coverage, resulting in over-smoothing patterns. Motivated by this analysis, we propose the Triarchy Detector (TriDetect), a semi-supervised approach that enhances binary classification by discovering latent architectural patterns within the fake class. TriDetect employs balanced cluster assignment via the Sinkhorn-Knopp algorithm and a cross-view consistency mechanism, encouraging the model to learn fundamental architectural distinctions. We evaluate our approach on two standard benchmarks and three in-the-wild datasets against 13 baselines to demonstrate its generalization capability to unseen generators.}
+}
+
+@article{nguyen2025survey,
+  abbr={ACM CSUR},
+  title={A Survey on Proactive Deepfake Defense: Disruption and Watermarking},
+  author={Nguyen-Le, Hong-Hanh and Tran, Van-Tuan and Nguyen, Dinh-Thuc and Le-Khac, Nhien-An},
+  year={2025},
+  volume={58},
+  number={5},
+  pages={1--37},
+  doi={10.1145/3771296},
+  journal={ACM Computing Surveys},
+  publisher={ACM},
+  selected={true},
+  abstract={The rapid proliferation of generative AI has led to led to unprecedented capabilities in synthesizing realistic deepfakes (DFs) across multiple modalities. This raises significant concerns regarding privacy, security, and copyright protection. Unlike passive detection approaches that operate after DFs have been created and distributed, proactive defense mechanisms aim at preventing the generation of malicious synthetic content at its source. This article provides a comprehensive survey of current proactive DF defense strategies, including Disruption and Watermarking. Disruption approaches protect individuals data by introducing imperceptible perturbations that prevent unauthorized exploitation by generative models, while watermarking approaches embed verifiable messages into data or models to enable content authentication and attribution. We also analyze proactive approaches across various evaluation metrics (imperceptibility, protectability/detectability, transferability, traceability, and robustness), and examine their effectiveness in real-world settings. Furthermore, we review the evolution of DF generation techniques, highlighting their rapid developments. Finally, we identify key challenges and promising future research directions to enhance proactive defense mechanisms.},
+  html={https://dl.acm.org/doi/10.1145/3771296}
+}
+
+@inproceedings{boyd2025blockchain,
+  abbr={ICDF2C},
+  title={Blockchain-based vs. SQL Database Systems for Digital Twin Evidence Management: A Comparative Forensic Analysis},
+  author={Franken, Boyd and Nguyen-Le, Hong-Hanh and Le-Khac, Nhien-An},
+  booktitle={16th EAI International Conference on Digital Forensics \& Cyber Crime (ICDF2C)},
+  pages={129--143},
+  year={2025},
+  doi={10.1007/978-3-032-22545-0_8},
+  abstract={Digital forensics faces unprecedented challenges with the emergence of digital twins and metaverse technologies. This paper presents the first comparative analysis between blockchain-based and traditional database systems for managing digital twin evidence in forensic investigations. We conducted controlled experiments comparing the Ethereum blockchain with IPFS storage against traditional SQL databases for digital twin evidence management. Our findings reveal that while blockchain provides superior data integrity and immutability, crucial for forensic applications, traditional databases offer better performance consistency. The blockchain implementation showed faster average storage times but higher variability in retrieval operations. Both systems maintained forensic integrity through hash verification, though blockchain immutable nature provides additional security guarantees essential for legal proceedings. This research contributes to the development of robust digital forensic methodologies for emerging technologies in the metaverse era.},
+  html={https://arxiv.org/abs/2512.00645}
+}
+
+@article{tran2025ToFU,
+  abbr={ECAI},
+  title={ToFU: Transforming How Federated Learning Systems Forget User Data},
+  author={Tran, Van-Tuan and Nguyen-Le, Hong-Hanh and Pham, Quoc-Viet},
+  abstract={Neural networks unintentionally memorize training data, creating privacy risks in federated learning (FL) systems, such as inference and reconstruction attacks on sensitive data. To mitigate these risks and to comply with privacy regulations, Federated Unlearning (FU) has been introduced to enable participants in FL systems to remove their data's influence from the global model. However, current FU methods primarily act post-hoc, struggling to efficiently erase information deeply memorized by neural networks. We argue that effective unlearning necessitates a paradigm shift: designing FL systems inherently amenable to forgetting. To this end, we propose a learning-to-unlearn Transformation-guided Federated Unlearning (ToFU) framework that incorporates transformations during the learning process to reduce memorization of specific instances. Our theoretical analysis reveals how transformation composition provably bounds instance-specific information, directly simplifying subsequent unlearning. Crucially, ToFU can work as a plug-and-play framework that improves the performance of existing FU methods. Experiments on CIFAR-10, CIFAR-100, and the MUFAC benchmark show that ToFU outperforms existing FU baselines, enhances performance when integrated with current methods, and reduces unlearning time.},
+  year={2025},
+  dimensions={true},
+  selected={true},
+  arxiv={2509.15861},
+  doi={10.3233/FAIA250917},
+  html={http://ebooks.iospress.nl/doi/10.3233/FAIA250917}
 }
 
 @article{nguyen2025think,
@@ -33,7 +189,24 @@
   year={2025},
   dimensions={true},
   selected={true},
-  html={https://www.ijcai.org/proceedings/2025/0854},
+  arxiv={2505.18787},
+  html={https://www.ijcai.org/proceedings/2025/0854}
+}
+
+@article{nguyen2024privacy,
+  abbr={Pattern Recognition},
+  title={Privacy-preserving speaker verification system using Ranking-of-Element hashing},
+  author={Nguyen-Le, Hong-Hanh and Tran, Lam and Nguyen, Dinh Song An and Le-Khac, Nhien-An and Nguyen, Thuc},
+  abstract={The advancements in automatic speaker recognition have led to the exploration of voice data for verification systems. This raises concerns about the security of storing voice templates in plaintext. In this paper, we propose a novel cancellable biometrics that does not require users to manage random matrices or tokens. First, we pre-process the raw voice data and feed it into a deep feature extraction module to obtain embeddings. Next, we propose a hashing scheme, Ranking-of-Elements, which generates compact hashed codes by recording the number of elements whose values are lower than that of a random element. This approach captures more information from smaller-valued elements and prevents the adversary from guessing the ranking value through Attacks via Record Multiplicity. Lastly, we introduce a fuzzy matching method, to mitigate the variations in templates resulting from environmental noise. We evaluate the performance and security of our method on two datasets: TIMIT and VoxCeleb1.},
+  journal={Pattern Recognition},
+  volume={159},
+  pages={111107},
+  year={2025},
+  publisher={Elsevier},
+  doi={10.1016/j.patcog.2024.111107},
+  html={https://www.sciencedirect.com/science/article/abs/pii/S0031320324008586},
+  dimensions={true},
+  selected={true}
 }
 
 @inproceedings{noort2024improving,
@@ -57,21 +230,19 @@
   organization={IEEE},
   html={https://ieeexplore.ieee.org/abstract/document/10650401},
   dimensions={true},
-  selected={false},
+  selected={false}
 }
 
-@article{nguyen2024privacy,
-  abbr={Pattern Recognition},
-  title={Privacy-preserving speaker verification system using Ranking-of-Element hashing},
-  author={Nguyen-Le, Hong-Hanh and Tran, Lam and Nguyen, Dinh Song An and Le-Khac, Nhien-An and Nguyen, Thuc},
-  abstract={The advancements in automatic speaker recognition have led to the exploration of voice data for verification systems. This raises concerns about the security of storing voice templates in plaintext. In this paper, we propose a novel cancellable biometrics that does not require users to manage random matrices or tokens. First, we pre-process the raw voice data and feed it into a deep feature extraction module to obtain embeddings. Next, we propose a hashing scheme, Ranking-of-Elements, which generates compact hashed codes by recording the number of elements whose values are lower than that of a random element. This approach captures more information from smaller-valued elements and prevents the adversary from guessing the ranking value through Attacks via Record Multiplicity. Lastly, we introduce a fuzzy matching method, to mitigate the variations in templates resulting from environmental noise. We evaluate the performance and security of our method on two datasets: TIMIT and VoxCeleb1.},
-  journal={Pattern Recognition},
-  pages={111107},
-  year={2025},
-  publisher={Elsevier},
-  html={https://www.sciencedirect.com/science/article/abs/pii/S0031320324008586},
-  dimensions={true},
-  selected={true},
+@article{nguyen2024passive,
+  abbr={Preprint},
+  title={Passive Deepfake Detection Across Multi-modalities: A Comprehensive Survey},
+  author={Nguyen-Le, Hong-Hanh and Tran, Van-Tuan and Nguyen, Dinh-Thuc and Le-Khac, Nhien-An},
+  abstract={In recent years, deepfakes (DFs) have been utilized for malicious purposes, such as individual impersonation, misinformation spreading, and artists style imitation, raising questions about ethical and security concerns. In this survey, we provide a comprehensive review and comparison of passive DF detection across multiple modalities, including image, video, audio, and multi-modal, to explore the inter-modality relationships between them. Beyond detection accuracy, we extend our analysis to encompass crucial performance dimensions essential for real-world deployment: generalization capabilities across novel generation techniques, robustness against adversarial manipulations and postprocessing techniques, attribution precision in identifying generation sources, and resilience under real-world operational conditions. Additionally, we analyze the advantages and limitations of existing datasets, benchmarks, and evaluation metrics for passive DF detection. Finally, we propose future research directions that address these unexplored and emerging issues in the field of passive DF detection. This survey offers researchers and practitioners a comprehensive resource for understanding the current landscape, methodological approaches, and promising future directions in this rapidly evolving field.},
+  journal={arXiv preprint arXiv:2411.17911},
+  year={2024},
+  arxiv={2411.17911},
+  publisher={ArXiv},
+  html={https://arxiv.org/abs/2411.17911}
 }
 
 @article{nguyen2024deepfake,
@@ -83,66 +254,4 @@
   year={2024},
   publisher={Authorea},
   html={https://www.techrxiv.org/doi/full/10.36227/techrxiv.173121245.50797124}
-}
-
-@article{nguyen2024passive,
-  abbr={Preprint},
-  title={Passive Deepfake Detection Across Multi-modalities: A Comprehensive Surveyy},
-  author={Nguyen-Le, Hong-Hanh and Tran, Van-Tuan and Nguyen, Dinh-Thuc and Le-Khac, Nhien-An},
-  abstract={In recent years, deepfakes (DFs) have been utilized for malicious purposes, such as individual impersonation, misinformation spreading, and artists style imitation, raising questions about ethical and security concerns. In this survey, we provide a comprehensive review and comparison of passive DF detection across multiple modalities, including image, video, audio, and multi-modal, to explore the inter-modality relationships between them. Beyond detection accuracy, we extend our analysis to encompass crucial performance dimensions essential for real-world deployment: generalization capabilities across novel generation techniques, robustness against adversarial manipulations and postprocessing techniques, attribution precision in identifying generation sources, and resilience under real-world operational conditions. Additionally, we analyze the advantages and limitations of existing datasets, benchmarks, and evaluation metrics for passive DF detection. Finally, we propose future research directions that address these unexplored and emerging issues in the field of passive DF detection. This survey offers researchers and practitioners a comprehensive resource for understanding the current landscape, methodological approaches, and promising future directions in this rapidly evolving field.},
-  journal={Authorea Preprints},
-  year={2024},
-  publisher={ArXiv},
-  html={https://arxiv.org/abs/2411.17911}
-}
-
-@article{nguyen2025survey,
-  abbr={ACM CSUR},
-  title={A Survey on Proactive Deepfake Defense: Disruption and Watermarking},
-  author={Nguyen-Le, Hong-Hanh and Tran, Van-Tuan and Nguyen, Dinh-Thuc and Le-Khac, Nhien-An},
-  year={2025},
-  journal={ACM Computing Surveys},
-  publisher={ACM},
-  selected={true},
-  abstract={The rapid proliferation of generative AI has led to led to unprecedented capabilities in synthesizing realistic deepfakes (DFs) across multiple modalities. This raises significant concerns regarding privacy, security, and copyright protection. Unlike passive detection approaches that operate after DFs have been created and distributed, proactive defense mechanisms aim at preventing the generation of malicious synthetic content at its source. This article provides a comprehensive survey of current proactive DF defense strategies, including Disruption and Watermarking. Disruption approaches protect individuals data by introducing imperceptible perturbations that prevent unauthorized exploitation by generative models, while watermarking approaches embed verifiable messages into data or models to enable content authentication and attribution. We also analyze proactive approaches across various evaluation metrics (imperceptibility, protectability/detectability, transferability, traceability, and robustness), and examine their effectiveness in real-world settings. Furthermore, we review the evolution of DF generation techniques, highlighting their rapid developments. Finally, we identify key challenges and promising future research directions to enhance proactive defense mechanisms.},
-    html={https://dl.acm.org/doi/10.1145/3771296}
-}
-
-@article{nguyen2025comprehensive,
-  abbr={Preprint},
-  title={Deepfake Detection Across Image, Video, and Audio: A Comprehensive Survey with Empirical Evaluation of Generalization and Robustness},
-  author={Nguyen-Le, Hong-Hanh and Tran, Van-Tuan and Nguyen, Dinh-Thuc and Le-Khac, Nhien-An},
-  year={2025},
-  selected={false},
-}
-
-
-@article{rettinger2026effective,
-  abbr={arXiv},
-  title={How Effective Are Publicly Accessible Deepfake Detection Tools? A Comparative Evaluation of Open-Source and Free-to-Use Platforms},
-  author={Rettinger, Michael and Beaumont, Benjamin and Le-Khac, Nhien-An and Nguyen-Le, Hong-Hanh},
-  journal={arXiv preprint arXiv:2603.04456},
-  year={2026},
-  abstract={The proliferation of deepfake imagery poses escalating challenges for practitioners tasked with verifying digital media authenticity. While detection algorithm research is abundant, empirical evaluations of publicly accessible tools that practitioners actually use remain scarce. This paper presents the first cross-paradigm evaluation of six tools, spanning two complementary detection approaches: forensic analysis tools (InVID & WeVerify, FotoForensics, Forensically) and AI-based classifiers (DecopyAI, FaceOnLive, Bitmind). Both tool categories were evaluated by professional investigators with law enforcement experience using blinded protocols across datasets comprising authentic, tampered, and AI-generated images sourced from DF40, CelebDF, and CASIA-v2. We report three principal findings: forensic tools exhibit high recall but poor specificity, while AI classifiers demonstrate the inverse pattern; human evaluators substantially outperform all automated tools; and human-AI disagreement is asymmetric, with human judgment prevailing in the vast majority of discordant cases. We discuss implications for practitioner workflows and identify critical gaps in current detection capabilities.},
-  html={https://arxiv.org/abs/2603.04456v1}
-}
-
-@article{tran2025ToFU,
-  abbr={ECAI},
-  title={ToFU: Transforming How Federated Learning Systems Forget User Data},
-  author={Van-Tuan, Tran and Nguyen-Le, Hong-Hanh and Quoc-Viet Pham},
-  abstract={Neural networks unintentionally memorize training data, creating privacy risks in federated learning (FL) systems, such as inference and reconstruction attacks on sensitive data. To mitigate these risks and to comply with privacy regulations, Federated Unlearning (FU) has been introduced to enable participants in FL systems to remove their data's influence from the global model. However, current FU methods primarily act post-hoc, struggling to efficiently erase information deeply memorized by neural networks. We argue that effective unlearning necessitates a paradigm shift: designing FL systems inherently amenable to forgetting. To this end, we propose a learning-to-unlearn Transformation-guided Federated Unlearning (ToFU) framework that incorporates transformations during the learning process to reduce memorization of specific instances. Our theoretical analysis reveals how transformation composition provably bounds instance-specific information, directly simplifying subsequent unlearning. Crucially, ToFU can work as a plug-and-play framework that improves the performance of existing FU methods. Experiments on CIFAR-10, CIFAR-100, and the MUFAC benchmark show that ToFU outperforms existing FU baselines, enhances performance when integrated with current methods, and reduces unlearning time.},
-  year={2025},
-  dimensions={true},
-  selected={true},
-  html={http://ebooks.iospress.nl/doi/10.3233/FAIA250917}
-}
-@inproceedings{boyd2025blockchain,
-  abbr={ICDF2C},
-  title={Blockchain-based vs. SQL Database Systems for Digital Twin Evidence Management: A Comparative Forensic Analysis},
-  author={Boyd, Francis and Nguyen-Le, Hong-Hanh and Le-Khac, Nhien-An},
-  booktitle={16th EAI International Conference on Digital Forensics & Cyber Crime (ICDF2C)},
-  year={2025},
-  abstract={Digital forensics faces unprecedented challenges with the emergence of digital twins and metaverse technologies. This paper presents the first comparative analysis between blockchain-based and traditional database systems for managing digital twin evidence in forensic investigations. We conducted controlled experiments comparing the Ethereum blockchain with IPFS storage against traditional SQL databases for digital twin evidence management. Our findings reveal that while blockchain provides superior data integrity and immutability, crucial for forensic applications, traditional databases offer better performance consistency. The blockchain implementation showed faster average storage times but higher variability in retrieval operations. Both systems maintained forensic integrity through hash verification, though blockchain immutable nature provides additional security guarantees essential for legal proceedings. This research contributes to the development of robust digital forensic methodologies for emerging technologies in the metaverse era.},
-  html={https://arxiv.org/abs/2512.00645v1}
 }

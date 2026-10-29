@@ -40,6 +40,26 @@ layout: default
 
     <div class="clearfix">{{ content }}</div>
 
+    <section class="teaching-highlight" aria-labelledby="teaching-highlight-title">
+      <p class="teaching-highlight-kicker">Teaching</p>
+      <p id="teaching-highlight-title" class="teaching-highlight-title">Supervision and teaching at UCD</p>
+      <p class="teaching-highlight-pitch">
+        Teaching Assistant at University College Dublin's School of Computer Science, supporting graduate and undergraduate courses and supervising
+        research projects. Graduate modules are Data and Database Forensics, Financial Investigation Techniques, AI Investigation, and the MSc
+        research project. The undergraduate module is Introduction to AI.
+      </p>
+      <ul class="teaching-highlight-stats">
+        <li><span>1</span> PhD student</li>
+        <li><span>6</span> MSc students</li>
+        <li><span>6</span> undergraduates</li>
+        <li><span>5</span> modules</li>
+      </ul>
+      <a class="teaching-highlight-cta" href="{{ '/teaching/' | relative_url }}">
+        View teaching and supervision
+        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+      </a>
+    </section>
+
     <!-- News -->
     {% if page.news and site.announcements.enabled %}
       <h2>

@@ -9,6 +9,7 @@ This is an academic portfolio website built with the **al-folio** Jekyll theme. 
 ## Development Commands
 
 ### Docker Setup (Recommended)
+
 ```bash
 # Pull and run the pre-built Docker image
 docker compose pull
@@ -24,6 +25,7 @@ docker compose -f docker-compose-slim.yml up
 The site will be available at `http://localhost:8080`
 
 ### Local Setup (Alternative)
+
 ```bash
 # Install Ruby dependencies
 bundle install
@@ -38,6 +40,7 @@ bundle exec jekyll serve
 The site will be available at `http://localhost:4000`
 
 ### Code Quality
+
 ```bash
 # Format code with Prettier (for Liquid templates)
 npm run format
@@ -49,6 +52,7 @@ npm install
 ## Architecture & Key Components
 
 ### Core Structure
+
 - **Jekyll Static Site Generator**: Converts Markdown/Liquid templates into static HTML
 - **Collections**: Organized content types (`_news`, `_projects`, `_posts`, `_pages`)
 - **Bibliography Management**: Uses Jekyll Scholar plugin with BibTeX files in `_bibliography/`
@@ -56,6 +60,7 @@ npm install
 - **Layouts**: Liquid templates in `_layouts/` define page structures
 
 ### Key Files
+
 - `_config.yml`: Main Jekyll configuration - site settings, author info, social links, plugin configuration
 - `_bibliography/papers.bib`: BibTeX entries for publications
 - `_data/cv.yml`: CV/resume data in YAML format (fallback when JSON not present)
@@ -63,6 +68,7 @@ npm install
 - `_pages/*.md`: Main pages (about, publications, projects, etc.)
 
 ### Content Management
+
 - **Publications**: Auto-generated from BibTeX entries, supports PDF attachments, code links, abstracts
 - **Blog Posts**: Markdown files in `_posts/`, supports Distill-style posts, Jupyter notebooks
 - **Projects**: Showcased in grid layout from `_projects/` collection
@@ -71,6 +77,7 @@ npm install
 ## Important Configuration
 
 ### Deployment Settings
+
 - GitHub Pages deployment requires:
   - Repository name: `<username>.github.io` for user pages
   - Set `url` in `_config.yml` to `https://<username>.github.io`
@@ -79,6 +86,7 @@ npm install
   - Deploy from `gh-pages` branch
 
 ### Theme Features
+
 - Light/Dark mode auto-detection
 - Responsive design
 - Math rendering (MathJax)
@@ -92,6 +100,7 @@ npm install
 ## Plugin Dependencies
 
 Key Jekyll plugins used:
+
 - `jekyll-scholar`: Bibliography and citation management
 - `jekyll-jupyter-notebook`: Jupyter notebook integration
 - `jekyll-imagemagick`: Image optimization
@@ -101,6 +110,7 @@ Key Jekyll plugins used:
 - `jemoji`: Emoji support
 
 ## Asset Management
+
 - Images: `/assets/img/`
 - PDFs: `/assets/pdf/`
 - JavaScript: `/assets/js/`
@@ -110,6 +120,7 @@ Key Jekyll plugins used:
 ## Testing & Validation
 
 Before deploying changes:
+
 1. Build site locally to check for Jekyll errors
 2. Verify bibliography entries are properly formatted
 3. Test responsive design at different screen sizes
