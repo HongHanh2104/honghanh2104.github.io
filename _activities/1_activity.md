@@ -26,10 +26,13 @@ My team, **FVNWL**, has achieved outstanding results in the European Statistics 
 This was a fantastic opportunity to tackle a real-world data challenge, and we couldn't be prouder of our solution.
 
 ---
+
 ## **The Challenge: Making Sense of Online Job Ads**
+
 In today's digital world, online job advertisements (OJAs) are a goldmine of information about the labor market. To unlock these insights, every job ad needs to be classified into a standardized occupational category. The problem? The sheer volume, variety, and messy nature of these ads make manual classification impossible.
 
 We faced several key hurdles:
+
 - **Inconsistency**: The same job can have wildly different titles and descriptions.
 - **Multiple Languages**: Ads are posted in many different languages, complicating analysis.
 - **Dynamic Roles**: Jobs evolve, and new roles pop up all the time, making it hard for any system to keep up.
@@ -37,16 +40,21 @@ We faced several key hurdles:
 Our mission was to build an automated, accurate, and innovative system to classify these job ads efficiently.
 
 ---
+
 ## **Our Solution: A "Generation-Assisted Retrieval" Framework**
 
 Instead of treating this as a simple classification task, we reframed it as a smart search (retrieval) problem. We developed a novel framework called **Generation-Assisted Retrieval**, which cleverly combines advanced search techniques with the reasoning power of Large Language Models (LLMs). Our precess was:
+
 - Hybrid Search: We first found potential job categories based on the ad's overall meaning (semantic search). We then re-ranked these results using a precise word-by-word match on the job title, which we hypothesized was the most critical piece of information.
 - LLM-Powered Analysis: The top results were fed to two Large Language Models (LLMs). They didn't just pick a code—they also explained their reasoning and provided a confidence score, making the system highly interpretable.
 - Smart Ensembling: We combined the LLMs' predictions using a custom Digit-wise Hierarchical Ensembling method, which intelligently voted on each digit of the final job code to maximize accuracy.
 
 ---
+
 ## **Meet My Team Member**
+
 We are a team of four PhD students from universities across Dublin, Ireland, each with a passion for machine learning and data science.
+
 - Hong-Hanh Nguyen-Le: University College Dublin
 - Van-Tuan Tran: Trinity College Dublin
 - Thang-Long Nguyen-Ho: Dublin City University
@@ -55,6 +63,7 @@ We are a team of four PhD students from universities across Dublin, Ireland, eac
 We are incredibly grateful for this recognition and want to thank the organizers of the European Statistics Awards. This challenge has been a fantastic learning experience, and we look forward to pushing the boundaries of data science further!
 
 ---
+
 If you are interested in our solution, explore more in our report and Github:
 
 <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-center align-items-center">
@@ -71,14 +80,3 @@ If you are interested in our solution, explore more in our report and Github:
     </a>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
